@@ -20,8 +20,13 @@ app.use(
   "/js",
   express.static(path.join(__dirname, "/noe_modules/jquery/dist "))
 );
+
+app.set('views','./src/views');
+app.set('view engine', 'pug');
+
 app.get("/", (req, res)=> {
-  res.sendFile(path.join(__dirname, "/views/index.html"));
+  // res.sendFile(path.join(__dirname, "/views/index.html"));
+  res.render('index');
 });
 
 app.listen(port, ()=> {
