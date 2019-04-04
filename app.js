@@ -22,12 +22,12 @@ app.use(
 );
 
 app.set('views','./src/views');
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 app.get("/", (req, res)=> {
   // res.sendFile(path.join(__dirname, "/views/index.html"));
   // res.render('index', {title:'My library'});
-  res.render('index', {list:['a','b']});
+  res.render('index', {list:['a','b'], title:'Library'});
 });
 
 app.listen(port, ()=> {
