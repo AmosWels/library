@@ -1,7 +1,11 @@
 html
     head
         title MyApp
-    body
-        h1 myApp    
-        p
-            h3sub headder
+    body(class=["Myclass"])
+        h1(id='myId') Library   
+        p 
+            h3(id='myId2')=title
+        ol
+            each val in list
+                li=val
+        

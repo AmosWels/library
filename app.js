@@ -26,7 +26,8 @@ app.set('view engine', 'pug');
 
 app.get("/", (req, res)=> {
   // res.sendFile(path.join(__dirname, "/views/index.html"));
-  res.render('index');
+  // res.render('index', {title:'My library'});
+  res.render('index', {list:['a','b']});
 });
 
 app.listen(port, ()=> {
