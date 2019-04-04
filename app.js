@@ -4,6 +4,7 @@ const debug = require("debug")("app");
 const path = require("path");
 const morgan = require("morgan");
 
+const port = process.env.PORT || 3000
 const app = express();
 app.use(morgan("tiny"));
 app.use(express.static(path.join(__dirname, "/public/")));
@@ -23,6 +24,6 @@ app.get("/", (req, res)=> {
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
-app.listen(3000, ()=> {
-  debug("listening to port " + chalk.green("3000"));
+app.listen(port, ()=> {
+  debug("listening at port " + chalk.green(port));
 });
