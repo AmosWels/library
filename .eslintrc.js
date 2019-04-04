@@ -14,5 +14,6 @@ module.exports = {
     },
     "rules": {
         "quotes": 0,
+        "comma-dangle":2
     }
 };
