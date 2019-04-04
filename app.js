@@ -6,7 +6,7 @@ const morgan = require("morgan");
 
 const port = process.env.PORT || 3000
 const app = express();
-const bookRouter = express.Router();
+const bookRouter = require('./src/routes/bookRoutes');
 
 const books = [
   {
